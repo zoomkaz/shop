@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header {
+    position: relative;
+}
+
+.header_container {
+    padding-bottom: 30px;
+    border-bottom: 3px solid #222;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.basket {
+    float: right;
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: all .2s linear;
+}
+
+.basket:hover,
+.basket.active {
+    color: #dc3d3d;
+    transform: scale(2);
+}
+
+.nav {
+    float: right;
+    list-style: none;
+}
+
+.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-out;
+}
+
+.nav li:hover {
+    opacity: 0.5;
+}
+
+.shop {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 450px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(96, 96, 96, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(96, 96, 96, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(96, 96, 96, 0.2);
+    z-index: 1;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.shop .item {
+    width: 100%;
+    border-radius: 0 0 0 0;
+    float: left;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    border-radius: 3px;
+}
+
+.shop .item:hover,
+.shop .item img:hover {
+    box-shadow: none;
+    transform: none;
+}
+
+.shop .item:hover {
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, -10px 0px 17px -2px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, -10px 0px 17px -2px rgba(0,0,0,0);
+}
+
+.delete {
+    color: #ca5252;
+    float: right;
+    position: relative;
+    top: -8px;
+    right: 20px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.delete:hover {
+    color: #d21414;
+    transform: scale(1.2);
+}
+
+.empty {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.shop .item img {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 0 0 0 0;
+}
+
+.shop .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.shop .item b {
+    font-weight: 600;
+    color: #797979;
+}
+
+.summa {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.presentation {
+    margin: 50px 0;
+    background-image: url('./images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #bcbcbc;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.presentation::after {
+    content: 'Лучшие товары для вашего дома';
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    width: 300px;
+}
+
+.presentation::before {
+    content: 'по низким ценам';
+    position: absolute;
+    top: 200px;
+    left: 70px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    width: 300px;
+}
+
+.categories div {
+    display: inline-block;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s linear;
+}
+
+.categories div:hover {
+    border-color: silver;
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item {
+    width: 30%;
+    margin-bottom: 50px;
+    background-color: #f5f5f5;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.full_item {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.full_item > div {
+    width: 600px;
+    height: 85%;
+    position: relative;
+    margin: 10px auto;
+    padding: 40px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.full_item img {
+    width: 100%;
+    height: 85%;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.item:hover {
+    box-shadow: 0 0 7px 1px gray;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+}
+
+main p, main b, main h2,
+.full_item p, .full_item b, .full_item h2 {
+    margin: 10px 20px;
+    color: #333;
+}
+
+.add_to_basket,
+.full_item .add_to_basket {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.add_to_basket:hover,
+.full_item .add_to_basket:hover {
+    transform: scale(1.5) translateY(-5px) translateX(-5px);
+}
+
+.add_to_basket:active,
+.full_item .add_to_basket:active {
+    transform: scale(1.0) translateY(5px) translateX(5px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
